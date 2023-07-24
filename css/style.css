@@ -140,7 +140,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30vw;
+    width: max(341px,30vw);
     gap: 1vw;
     margin: 10px 20px;
     user-select: none;
@@ -156,7 +156,9 @@ body {
 
 .form-grid {
     display: grid;
-    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
     gap: 40px;
     width: 30vw;
     grid-template-columns: 1fr 1fr;
@@ -210,6 +212,9 @@ body {
 
 .create-account {
     grid-column-end: span 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .create-account p {
@@ -218,6 +223,11 @@ body {
 
 .create-account p>a {
     color: var(--primary-color);
+}
+
+.create-account button:hover {
+    cursor: pointer;
+    scale: 1.1;
 }
 
 form div>span {
@@ -236,10 +246,6 @@ form div>h6 {
     user-select: none;
 }
 
-.create-account button:hover {
-    cursor: pointer;
-    scale: 1.1;
-}
 
 .created-check img {
     filter: invert(52%) sepia(63%) saturate(267%) hue-rotate(121deg) brightness(95%) contrast(89%);
@@ -253,19 +259,22 @@ form div>h6 {
 @media (max-width: 615px){
     body{
         width: 100%;
+        overflow: visible;
     }
     .side-info{
         display: none;
     }
     .form-container{
         width: 100vw;
+        /* height: 130vh; */
+        justify-content: flex-start;
+
     }
     .form-grid{
         display: flex;
         flex-direction: column;
-        place-items: center ;
-        align-items: center;
-        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: ; */
         gap: 20px;
         width: 100%;
         gap: 45px;
@@ -273,9 +282,20 @@ form div>h6 {
         padding: 0;
     }
 
-}
+    .create-account{
+        justify-content: center;
+        align-items: center;
+    }
+    .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max(341px,10vw);
+        user-select: none;
+    }
+    
+    .separator hr {
+        width: 100px;
+    }
 
-@media (max-width:420px){
-    
-    
 }
