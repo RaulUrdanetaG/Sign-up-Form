@@ -23,28 +23,28 @@ for(let i=0; i<inputFields.length; i++){
 
     currentInputField.addEventListener('keyup', (e)=>{
         let message = currentErrorDisplayer
-        e.target.value != "" ? onValidation(currentErrorDisplayer, '', 0) : onValidation(currentErrorDisplayer, 'This field is Required *', 0)
+        e.target.value != "" ? (onValidation(currentErrorDisplayer, '', 0),e.target.classList.remove('invalid')) : (onValidation(currentErrorDisplayer, 'This field is Required *', 0),e.target.classList.add('invalid'));
     })
 }
 
 phone.addEventListener('keyup', (e)=>{
     let message = errorDisplayers[3]
-    e.target.value == e.target.value.replace(/\D/g,'') ? onValidation(message, '', 1) : onValidation(message, '*Please enter valid number', 0)
+    e.target.value == e.target.value.replace(/\D/g,'') ? (onValidation(message, '', 1),e.target.classList.remove('invalid')) : (onValidation(message, '*Please enter valid number', 0),e.target.classList.add('invalid'));
 })
 
 email.addEventListener('keyup', (e) => {
     let message = errorDisplayers[2]
-    email.value.includes('@') & email.value.includes('.com') ? onValidation(message, '', 1) : onValidation(message, 'Please provide a valid Email *', 0)
+    email.value.includes('@') & email.value.includes('.com') ? (onValidation(message, '', 1),e.target.classList.remove('invalid')) : (onValidation(message, 'Please provide a valid Email *', 0),e.target.classList.add('invalid'));
 })
 
 password.addEventListener('keyup', (e) => {
     let message = errorDisplayers[4]
-    password.value.length >= 8 ? onValidation(message, '', 1) : onValidation(message, 'Password requires minimum 8 charecters *', 0)
+    password.value.length >= 8 ? (onValidation(message, '', 1),e.target.classList.remove('invalid')) : (onValidation(message, 'Password requires minimum 8 charecters *', 0),e.target.classList.add('invalid'));
 })
 
 passwordConfirm.addEventListener('keyup', (e) => {
     let message = errorDisplayers[5]
-    password.value === e.target.value ? onValidation(message, '', 1) : onValidation(message, 'Password did not match *', 0)
+    password.value === e.target.value ? (onValidation(message, '', 1),e.target.classList.remove('invalid')) : (onValidation(message, 'Password did not match *', 0),e.target.classList.add('invalid'));
 })
 
 submitBtn.addEventListener('click', (e)=>{
@@ -55,7 +55,8 @@ submitBtn.addEventListener('click', (e)=>{
     }
     else{
         for(let i=0; i<errorDisplayers.length; i++){
-            errorDisplayers[i].textContent = '*This field is Required'
+            errorDisplayers[i].textContent = '*This field is Required';
+            inputFields[i].classList.add('invalid');
         }
     }
 })
