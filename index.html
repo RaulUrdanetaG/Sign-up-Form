@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <a href="https://storyset.com/user">User illustrations by Storyset</a>
+    <div class="content">
+        <div class="side-info">
+            <div class="brand-info">
+                <h1>Marca</h1>
+                <img src="./images/Sign up-rafiki.svg" alt="Sign up vector">
+                <h4>Sign up now!</h4>
+            </div>
+            <div class="credits">
+                <a href="https://storyset.com/user" target="_blank">illustrations by Storyset</a>
+            </div>
+        </div>
+        <div class="form-container">
+            <h1>Get Started</h1>
+            <div class="login-alternatives">
+                <button><img src="./images/logo-google.svg" alt="Google logo">Sign up with
+                    Google</button>
+                <button><img src="./images/logo-facebook.svg" alt="Facebook logo">Sign up with
+                    Facebook</button>
+            </div>
+            <div class="separator">
+                <hr>
+                <h5>or</h5>
+                <hr>
+            </div>
+            <form action="" method="">
+                <div class="input-container first-name">
+                    <label for="first-name"></label>
+                    <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                    <h5 class="error"></h5>
+                </div>
+                <div class="input-container last-name">
+                    <label for="last-name"></label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                    <h5 class="error"></h5>
+                </div>
+                <div class="input-container email">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    <h5 class="error"></h5>
+                </div>
+                <div class="input-container">
+                    <label for="tel-number"></label>
+                    <input type="tel" name="tel-number" id="tel-number" placeholder="Phone Number">
+                    <h5 class="error"></h5>
+                </div>
+                <div class="input-container password">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Password" minlength="8" required >
+                    <h5 class="error"></h5>
+                </div>
+                <div class="input-container password-confirm">
+                    <label for="password-confirm"></label>
+                    <input type="password" name="password-confirm" id="password-confirm" placeholder="Confirm Password" required>
+                    <h5 class="error"></h5>
+                </div>
+                <div class="input-container create-account">
+                    <p>By signing up, you are agreeing to our <a href="">Terms & Conditions</a> and <a href="">Privacy
+                            poilcy</a>.</p>
+                    <button type="submit" id="submit-button">Create Account</button>
+                    <p>Already have an account? <a href="">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>

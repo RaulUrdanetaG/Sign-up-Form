@@ -109,6 +109,7 @@ body {
     color: var(--font-color);
 }
 
+
 .login-alternatives button:hover {
     scale: 1.1;
     cursor: pointer;
@@ -118,6 +119,7 @@ body {
 .login-alternatives button>img {
     width: 20px;
     height: 20px;
+    filter: invert(32%) sepia(79%) saturate(627%) hue-rotate(223deg) brightness(100%) contrast(85%);
 }
 
 .separator {
@@ -155,7 +157,8 @@ form {
     border: none;
     border-bottom: 2px solid var(--font-dark-color);
     margin-bottom: 5px;
-    min-width: 270px;
+    /* width: min(100%, 270px); */
+    width: clamp(146px,100%,270px);
     color: var(--font-color);
 }
 
@@ -172,9 +175,15 @@ form {
     border-bottom: 2px solid var(--primary-color);
 }
 
+.input-container input.invalid {
+    color: var(--font-color);
+    border-bottom: 2px solid var(--error-color);
+}
+
 .input-container input:focus {
     color: var(--font-color);
     outline: none;
+    scale: 1.05;
     transition: 0.3s;
 }
 
@@ -183,6 +192,7 @@ form {
     outline: none;
     transition: 0.3s;
 }
+
 
 .create-account {
     grid-column-end: span 2;
