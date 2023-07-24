@@ -158,7 +158,7 @@ form {
     border-bottom: 2px solid var(--font-dark-color);
     margin-bottom: 5px;
     /* width: min(100%, 270px); */
-    width: clamp(146px,100%,270px);
+    width: clamp(146px, 100%, 270px);
     color: var(--font-color);
 }
 
@@ -226,3 +226,5 @@ form div>h5 {
     cursor: pointer;
     scale: 1.1;
 }
+
+
