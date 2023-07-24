@@ -267,12 +267,16 @@ form div>h6 {
     .form-container{
         width: 100vw;
         padding-top: 30px;
-        height: 130vh;
+        height: 140vh;
         justify-content: flex-start;
 
     }
     #form{
         height: 100%;
+        justify-content: flex-start;
+    }
+    .form-container{
+        padding: 0;
     }
     .form-container h1{
         margin-top: 30px;
