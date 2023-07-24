@@ -265,6 +265,7 @@ form div>h6 {
         display: none;
     }
     .form-container{
+        margin: 30px 0;
         width: 100vw;
         /* height: 130vh; */
         justify-content: flex-start;
