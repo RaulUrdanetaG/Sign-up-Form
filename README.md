@@ -2,7 +2,7 @@
 
 <img src="./images/finalApp.jpeg"/>
 
-# Learnigns
+# Learnings
 
 - Used SVG for the first time, changed the color applying filters.
 - Used forms for the irst time, learned how to style them, validate the info, remove the default error, adn style it depending on the validation.
