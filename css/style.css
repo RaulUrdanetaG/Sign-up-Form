@@ -273,6 +273,7 @@ form div>h6 {
     }
     #form{
         height: 100%;
+        width: 100%;
         justify-content: flex-start;
     }
     .form-container{
@@ -284,10 +285,10 @@ form div>h6 {
     .form-grid{
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
-        /* justify-content: ; */
+        align-items: center;
+        justify-content: center;
         gap: 20px;
-        width: 100%;
+        width: 100vw;
         gap: 45px;
         margin: 20px 0px;
         padding: 0;
@@ -307,6 +308,10 @@ form div>h6 {
     
     .separator hr {
         width: 100px;
+    }
+
+    .input-container input{
+        width: max(341px,10vw);
     }
 
 }
