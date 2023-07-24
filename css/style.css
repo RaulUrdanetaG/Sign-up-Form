@@ -6,7 +6,7 @@
     --warnging-color: #FFBD00;
     --error-color: #D62839;
     --font-color: white;
-    --font-dark-color:#8E959D
+    --font-dark-color: #8E959D
 }
 
 *::after,
@@ -43,9 +43,10 @@ body {
     min-height: 390px;
 }
 
-.side-info img{
+.side-info img {
     margin: 0 20px;
 }
+
 .side-info a {
     text-decoration: none;
     color: var(--secondary-color);
@@ -81,14 +82,14 @@ body {
     width: 65vw;
     height: 100vh;
     min-height: 390px;
-    
+
 }
 
-.form-container h1{
+.form-container h1 {
     margin: 0;
 }
 
-.login-alternatives{
+.login-alternatives {
     display: flex;
     flex-direction: column;
 }
@@ -126,47 +127,92 @@ body {
     width: 30vw;
     gap: 1vw;
     margin: 10px 20px;
+    user-select: none;
 }
 
 .separator hr {
     width: 30vw;
 }
 
-.separator h5{
+.separator h5 {
     margin: 0;
 }
 
-form{
+form {
     display: grid;
     padding: 30px;
     gap: 40px;
     grid-template-columns: 1fr 1fr;
 }
 
-.input-container{
+.input-container {
     position: relative;
     height: auto;
 }
 
-.input-container input{
+.input-container input {
     background-color: var(--secondary-color);
     border: none;
     border-bottom: 2px solid var(--font-dark-color);
     margin-bottom: 5px;
     min-width: 270px;
+    color: var(--font-color);
 }
 
-form div > span{
+.input-container button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--font-color);
+}
+
+.input-container input:valid {
+    color: var(--font-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.input-container input:focus {
+    color: var(--font-color);
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-container input:focus-visible {
+    color: var(--font-color);
+    outline: none;
+    transition: 0.3s;
+}
+
+.create-account {
+    grid-column-end: span 2;
+}
+
+.create-account p {
+    font-size: 0.7rem;
+}
+
+.create-account p>a {
+    color: var(--primary-color);
+}
+
+form div>span {
     position: absolute;
     top: 0;
     left: 0;
     color: var(--font-dark-color);
 }
 
-form div>h5{
+form div>h5 {
     margin: 0;
 }
 
+.input-container>h5 {
+    color: var(--error-color);
+    user-select: none;
+}
 
-
-
+.create-account button:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
