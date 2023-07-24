@@ -4,7 +4,9 @@ const errorDisplayers = document.querySelectorAll('.error'),
     passwordConfirm = document.getElementById('password-confirm'),
     inputFields = document.querySelectorAll('input'),
     phone = document.getElementById('tel-number'),
-    submitBtn = document.getElementById('submit-button');
+    submitBtn = document.getElementById('submit-button'),
+    formContainer = document.getElementById('form'),
+    createdCheck = document.querySelector('.created-check');
 
 let count = 2;
 const inputs = [...inputFields];
@@ -48,8 +50,8 @@ passwordConfirm.addEventListener('keyup', (e) => {
 submitBtn.addEventListener('click', (e)=>{
     e.preventDefault()
     if(count > 5){
-        cardContainer.style.display = 'none'
-        outroOverlay.classList.remove('disabled')
+        formContainer.style.display = "none";
+        createdCheck.classList.remove('disabled');
     }
     else{
         for(let i=0; i<errorDisplayers.length; i++){

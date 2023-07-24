@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url(./normalize.css);
 
 :root {
     --primary-color: #7E57C2;
@@ -6,7 +7,8 @@
     --warnging-color: #FFBD00;
     --error-color: #D62839;
     --font-color: white;
-    --font-dark-color: #8E959D
+    --font-dark-color: #8E959D;
+    --check-color: #549F93;
 }
 
 *::after,
@@ -85,6 +87,18 @@ body {
 
 }
 
+#form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+    height: 100vh;
+    min-height: 390px;
+}
+
 .form-container h1 {
     margin: 0;
 }
@@ -140,10 +154,11 @@ body {
     margin: 0;
 }
 
-form {
+.form-grid {
     display: grid;
     padding: 30px;
     gap: 40px;
+    width: 30vw;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -157,7 +172,6 @@ form {
     border: none;
     border-bottom: 2px solid var(--font-dark-color);
     margin-bottom: 5px;
-    /* width: min(100%, 270px); */
     width: clamp(146px, 100%, 270px);
     color: var(--font-color);
 }
@@ -213,11 +227,11 @@ form div>span {
     color: var(--font-dark-color);
 }
 
-form div>h5 {
+form div>h6 {
     margin: 0;
 }
 
-.input-container>h5 {
+.input-container>h6 {
     color: var(--error-color);
     user-select: none;
 }
@@ -227,4 +241,41 @@ form div>h5 {
     scale: 1.1;
 }
 
+.created-check img {
+    filter: invert(52%) sepia(63%) saturate(267%) hue-rotate(121deg) brightness(95%) contrast(89%);
+}
 
+.disabled {
+    display: none;
+}
+
+
+@media (max-width: 615px){
+    body{
+        width: 100%;
+    }
+    .side-info{
+        display: none;
+    }
+    .form-container{
+        width: 100vw;
+    }
+    .form-grid{
+        display: flex;
+        flex-direction: column;
+        place-items: center ;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        gap: 45px;
+        margin: 20px 0px;
+        padding: 0;
+    }
+
+}
+
+@media (max-width:420px){
+    
+    
+}
